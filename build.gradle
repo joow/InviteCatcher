@@ -1,0 +1,19 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+mainClassName = 'org.invitecatcher.InviteCatcher'
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compile 'com.squareup.retrofit2:retrofit:2.0.0-beta3'
+    compile 'com.squareup.retrofit2:converter-gson:2.0.0-beta3'
+    compile 'com.mitchellbosecke:pebble:2.0.0'
+    compile 'com.sparkjava:spark-core:2.3'
+}
+
+task stage(dependsOn: ['clean', 'installDist'])

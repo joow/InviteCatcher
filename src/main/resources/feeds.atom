@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+    <title>UsenetInvites Offers</title>
+    <link href="{{ url }}"/>
+    <updated>{{ date }}</updated>
+    <id>1</id>
+
+    {% for offer in offers %}
+    <entry>
+        <title>{{ offer.title }}</title>
+        <link href="{{ offer.url }}"/>
+        <id>{{ offer.id }}</id>
+        <updated>{{ offer.createdAt }}</updated>
+        <summary type="html">{{ offer.text }}</summary>
+    </entry>
+    {% endfor %}
+
+</feed>
